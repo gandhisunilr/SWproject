@@ -1,0 +1,83 @@
+
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+\usepackage{color}
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{multirow}
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+
+\begin{document}
+\definecolor{orange}{rgb}{1,0.5,0}
+
+%--------------------TITLE-------------
+
+\title{Using Semantic Technologies to Construct Research Topicology}
+\author{Sunil Gandhi, Akshay Peshave, Raghavendra Rao\\ 
+\texttt{sunilga1@umbc.edu, peshave1@umbc.edu, rrao1@umbc.edu}}
+\date{\today}
+\maketitle
+
+%--------------------SECTIONS----------------------------------
+
+
+\begin{abstract} 
+\end{abstract} 
+
+\section{Introduction}
+Aim: Creation of triples representing entity associations based on context and augmented by inferred associations using Semantic Web Technology.\\
+
+Motivation: 
+Well connected graph of entities based on topics/context find numerous applications in areas of information mining, pattern analysis and data visualisation.A system to do this which can be deployed in a closed organization context carries much value.\\
+
+Conference publications typically deal with research in a focussed topic or knowledge area of any science. These publications, and in turn their authors, can be represented as clusters or well connected graphs based on their topic commonalities. Such logical representations find numerous applications in areas of information mining, pattern analysis, data visualisation etc. 
+
+\section{Related work}
+We studied existing technologies which do something related to generating research topicology. Follwing is the related work done in generating semantic data for research papers:
+
+\begin{itemize}
+\item Google Knowledge graph \cite{googlekg}: is a knowledge base used by google for performing search queries. It provides similar features as that of our proposed project, but for a larger domain. Although information like education, birth and related people for a person is easy to search, information about what topic a researcher is working on or bibliographic information of a particular paper that the person has authored is hard to find.\\
+\item Semantic Web Conference Corpus \cite{swdata} aggregating publications to conferences dealing with the Semantic Web knowledge area only and generating triples for conference proceedings. Input is via RDFa, Excel or XML import. Human intervention is required to input the import file\\
+\item Google Scholar : is a simple tool to search for scholarly articles. Based on the search result, one can then explore related works, citations, authors, and publications. But It doesn’t find infer about relationships amongst topics , authors and their publications.\\
+\item PubZone\cite{PubZone} :  is an open platform to discuss publications and rate articles. It also provides bibliographic information for the articles selected.\\
+\end{itemize}
+Although  there is some work done in organizing the documents in form of RDF triples, but we are not aware of wany work done in which we can find which two researchers know each other or which are the topics a person must know before reading a research paper. Our system enables us to make such inferences. These inferences are important and can save lot of time by knowing pre requisites before reading research
+\section{General Approach}
+
+Metadata extraction\\
+Topic and knowledge area extraction\\
+Creating triples using standard ontologies and inferences\\
+Pushing data to a triple store
+
+\section{Ontologies used}
+
+FOAF :  Authors\\
+DC Terms :  Publication meta-data\\
+SIOC + SKOS : Concepts and tags\\
+ACM CCS SKOS
+	
+\section{Extracting data from ACM website}
+ACM Digital Library
+
+\section{Generating RDF triples and Inferences}
+	Google Refine
+\section{Conclusion}
+
+\section{Future work}
+
+\begin{thebibliography}{99}
+
+\bibitem{swdata} \textit{Semantic Web Conference Corpus http://data.semanticweb.org/ }
+\bibitem{PubZone} \textit{PubZone http://www.pubzone.org/index.do}
+\bibitem{LDA} \textit{Latent Dirchlet Allocation}. Blei, David M., Andrew Y. Ng, and Michael I. Jordan.
+\bibitem{AlchemyAPI} \textit{AlchemyAPI http://www.alchemyapi.com/}
+\bibitem{DC} \textit{Dublin Core Metadata Initiative http://dublincore.org/ }
+\bibitem{foaf} \textit{Friend-of-a-Friend Ontology http://xmlns.com/foaf/spec/}
+\bibitem{googlekg} \textit{Google Knowledge grah http://www.google.com/insidesearch/features/search/knowledge.html}
+\end{thebibliography}
+
+\end{document} 
